@@ -1,26 +1,3 @@
-//using ServiceAppDMSRecieving;
-
-//IHost host = Host.CreateDefaultBuilder(args)
-//    .ConfigureServices(services =>//(context, services) =>
-//    {
-//        //var configuration = context.Configuration;
-
-//        //string preference = configuration["ConnectionStrings:DMS"];
-
-//        services.AddTransient<ImmsRCRcsvFile, mmsRCRcsvFileService>();
-//        services.AddTransient<ImmsPORAcsvFile, mmsPORAcsvFileService>();
-//        services.AddTransient<IAudilogs, AudilogsService>();
-
-//        services.AddHostedService<Worker>();
-//    })
-//    .Build();
-//if (IsDevelopment())
-//{
-//} else if (IsProduction())
-//{ 
-//}
-//await host.RunAsync();
-
 using ServiceAppDMSRecieving;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
