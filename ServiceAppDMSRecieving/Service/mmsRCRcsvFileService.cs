@@ -27,6 +27,7 @@ namespace ServiceAppDMSRecieving
         }
         public async void CopyCSVfileMMS_RCR()
         {
+            _logger.LogInformation("ConnectionStrings is  " + _configuration.GetSection("ConnectionStrings:DMS").Value);
             DateTime dateTime = DateTime.Now;
             string extendName = dateTime.ToString("MMddyyy_HHmmss");
             string sourceDirectory = _configuration.GetSection("FilePathforRCR:sourceDirectory").Value;  // UNC path to the CSV file 
@@ -91,14 +92,25 @@ namespace ServiceAppDMSRecieving
                         Directory.CreateDirectory(PDFdestinationDirectory);
                         // Create the destination path (the target file location)
                         string destinationpdfPath = Path.Combine(PDFdestinationDirectory, pdffileName);
+                        string destinationPath1 = Path.Combine(destinationDirectory, pdffileName);
 
                         // Copy the file to the destination path
                         bool isSuccessCopyingpdf = false;
+                        bool isSuccessCopyingpdfinlocal = false;
                         int retryCount = 0;
                         do
                         {
                             isSuccessCopyingpdf = await CopyFile(firstpdfFile, destinationpdfPath);
+                            //isSuccessCopyingpdfinlocal = await CopyFile(firstpdfFile, destinationPath1);
                             retryCount++;
+                            if (!isSuccessCopyingpdf)
+                            {
+                                _audilogs.writeLogs("firstpdfFile = " + firstpdfFile + " destinationpdfPath = " + destinationpdfPath);
+                            }
+                            //if (!isSuccessCopyingpdfinlocal)
+                            //{
+                            //    _audilogs.writeLogs("firstpdfFile = " + firstpdfFile + " destinationpdfPath = " + destinationPath1);
+                            //}
                         }
                         while (retryCount < 5 && !isSuccessCopyingpdf); //if failed retry copy file up to 5x 
 
@@ -135,7 +147,7 @@ namespace ServiceAppDMSRecieving
                     // Create a new GUID
                     string uniqueUser = "C287E52E-5A0C-4FDA-836A-2DCADE1E00C4";// Guid uniqueUser = GenerateGuidFromString("SystemGenerated");
 
-                    var records = csv.GetRecords<QF_RCR>(); // YourDataModel should represent the CSV structure
+                    var records = csv.GetRecords<QF_RCRform>(); // YourDataModel should represent the CSV structure
 
                     using (SqlConnection connection = new SqlConnection(connectionString))
                     {
@@ -143,12 +155,12 @@ namespace ServiceAppDMSRecieving
 
                         foreach (var record in records)
                         {
-                            bool isRCRexist = await IsRCRnumberexist("QF_RCR", record.RCRNumber);
-
+                            bool isRCRexist = await IsRCRnumberexist("QF_RCRform", record.RCRNumber);
+                            _audilogs.writeLogs("isRCRexist in insertion =>" + isRCRexist + " RCRNumber" + record.RCRNumber);
                             if (!isRCRexist)  //Insert New Data
                             {
                                 // SQL command to insert the data
-                                string query = "INSERT INTO QF_RCR " +
+                                string query = "INSERT INTO QF_RCRform " +
                                               "(                                        " +
                                                 "[ID]                                   " +
                                                 ",[Createdby]                           " +
@@ -220,7 +232,7 @@ namespace ServiceAppDMSRecieving
                             }
                             else   //Update Data
                             {
-                                string queryUpdate = "UPDATE QF_RCR SET "+
+                                string queryUpdate = "UPDATE QF_RCRform SET " +
                                                                     "[Location] = @Location                        " +
                                                                     ",[PONumber] = @PONumber                        " +
                                                                     ",[VendorCode] = @VendorCode                    " +
@@ -357,8 +369,8 @@ namespace ServiceAppDMSRecieving
             }
             catch (Exception ex)
             {
-                _logger.LogInformation("Error: {0}", ex.Message);
-                _audilogs.writeLogs(ex.Message);
+                _logger.LogInformation("InsertPDFToDatabase Error: {0}", ex.Message);
+                _audilogs.writeLogs("InsertPDFToDatabase Error: {0}" + ex.Message);
                 return false;
             }
         }
@@ -368,7 +380,7 @@ namespace ServiceAppDMSRecieving
             {
                 // Copy the file to the destination path
                 File.Copy(firstFile, destinationPath1, true); // Overwrites if the file exists
-                _audilogs.writeLogs("File copied successfully " + firstFile + " to new path");
+                _audilogs.writeLogs("File copied successfully " + firstFile + " to new path " + destinationPath1);
                 return true;
             }
             catch (Exception ex)

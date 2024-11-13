@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "cabddTYOwCc=",
+  "dgSpecHash": "A3m+JVFynLE=",
   "success": true,
-  "projectFilePath": "C:\\Users\\rnava\\MyProject\\DMS\\DMS - Receiving Enhancement\\Console DMSreceivingdotnet\\ServiceAppDMS\\ServiceAppDMSRecieving\\ServiceAppDMSRecieving\\ServiceAppDMSRecieving.csproj",
+  "projectFilePath": "C:\\Users\\rnava\\MyProject\\DMS\\DMS - Receiving Enhancement\\Console DMSreceivingdotnet\\ServiceAppDMS_GitHub\\ServiceAppDMSRecieving\\ServiceAppDMSRecieving\\ServiceAppDMSRecieving.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\rnava\\.nuget\\packages\\csvhelper\\33.0.1\\csvhelper.33.0.1.nupkg.sha512",
     "C:\\Users\\rnava\\.nuget\\packages\\microsoft.extensions.configuration\\6.0.0\\microsoft.extensions.configuration.6.0.0.nupkg.sha512",

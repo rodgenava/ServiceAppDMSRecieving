@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ServiceAppDMSRecieving
 {
-    public class QF_RCR
+    public class QF_RCRform
     {
         //public string ID { get; set; }  // Change the property types as per your CSV columns
         //public string Createdby { get; set; }

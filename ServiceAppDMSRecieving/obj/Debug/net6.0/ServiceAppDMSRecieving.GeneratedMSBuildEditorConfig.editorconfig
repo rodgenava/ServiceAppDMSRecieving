@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ServiceAppDMSRecieving
-build_property.ProjectDir = C:\Users\rnava\MyProject\DMS\DMS - Receiving Enhancement\Console DMSreceivingdotnet\ServiceAppDMS\ServiceAppDMSRecieving\ServiceAppDMSRecieving\
+build_property.ProjectDir = C:\Users\rnava\MyProject\DMS\DMS - Receiving Enhancement\Console DMSreceivingdotnet\ServiceAppDMS_GitHub\ServiceAppDMSRecieving\ServiceAppDMSRecieving\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

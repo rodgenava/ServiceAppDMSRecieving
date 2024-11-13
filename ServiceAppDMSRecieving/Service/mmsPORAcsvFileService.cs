@@ -140,11 +140,11 @@ namespace ServiceAppDMSRecieving
 
                         foreach (var record in records)
                         {
-                            bool isRCRNumberExist = await _mmsRCRcsvFile.IsRCRnumberexist("QF_RCR", record.RCRNumber);
+                            bool isRCRNumberExist = await _mmsRCRcsvFile.IsRCRnumberexist("QF_RCRform", record.RCRNumber);
 
                             if (!isRCRNumberExist) //Insert
                             {
-                                string query = "INSERT INTO QF_RCR " +
+                                string query = "INSERT INTO QF_RCRform " +
                                               "(                                        " +
                                                 "[ID]                                   " +
                                                 ",[Createdby]                           " +
@@ -201,7 +201,7 @@ namespace ServiceAppDMSRecieving
                             {
                                 if (record.PORAAmount != null || record.PORADate != null)
                                 {
-                                    string queryUpdate = "UPDATE QF_RCR SET ";
+                                    string queryUpdate = "UPDATE QF_RCRform SET ";
 
                                     if (record.PORAAmount != null && record.PORADate == null)
                                     {

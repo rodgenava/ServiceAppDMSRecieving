@@ -17,10 +17,12 @@ namespace ServiceAppDMSRecieving
         }
         public async void writeLogs(string logsdata = "") 
         {
-            string fileName = "Audilogs.txt";
+            DateTime dateOnly = DateTime.Now;
+            string fileName = String.Format("Audilogs{0}.txt", dateOnly.ToString("MMddyyyy"));
             string path = _configuration.GetSection("AuditLogs:links").Value;  // UNC path to the CSV file 
             string fullpath = Path.Combine(path, fileName);
 
+            Directory.CreateDirectory(path);
             if (!File.Exists(fullpath))
             {
                 File.Create(fileName);

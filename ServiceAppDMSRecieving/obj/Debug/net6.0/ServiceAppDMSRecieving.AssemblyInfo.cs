@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ServiceAppDMSRecieving")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5452fea1b402ae65e1e36e0da91b3bb29542554e")]
 [assembly: System.Reflection.AssemblyProductAttribute("ServiceAppDMSRecieving")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ServiceAppDMSRecieving")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

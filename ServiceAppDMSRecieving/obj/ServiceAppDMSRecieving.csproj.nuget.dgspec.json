@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\rnava\\MyProject\\DMS\\DMS - Receiving Enhancement\\Console DMSreceivingdotnet\\ServiceAppDMS\\ServiceAppDMSRecieving\\ServiceAppDMSRecieving\\ServiceAppDMSRecieving.csproj": {}
+    "C:\\Users\\rnava\\MyProject\\DMS\\DMS - Receiving Enhancement\\Console DMSreceivingdotnet\\ServiceAppDMS_GitHub\\ServiceAppDMSRecieving\\ServiceAppDMSRecieving\\ServiceAppDMSRecieving.csproj": {}
   },
   "projects": {
-    "C:\\Users\\rnava\\MyProject\\DMS\\DMS - Receiving Enhancement\\Console DMSreceivingdotnet\\ServiceAppDMS\\ServiceAppDMSRecieving\\ServiceAppDMSRecieving\\ServiceAppDMSRecieving.csproj": {
+    "C:\\Users\\rnava\\MyProject\\DMS\\DMS - Receiving Enhancement\\Console DMSreceivingdotnet\\ServiceAppDMS_GitHub\\ServiceAppDMSRecieving\\ServiceAppDMSRecieving\\ServiceAppDMSRecieving.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rnava\\MyProject\\DMS\\DMS - Receiving Enhancement\\Console DMSreceivingdotnet\\ServiceAppDMS\\ServiceAppDMSRecieving\\ServiceAppDMSRecieving\\ServiceAppDMSRecieving.csproj",
+        "projectUniqueName": "C:\\Users\\rnava\\MyProject\\DMS\\DMS - Receiving Enhancement\\Console DMSreceivingdotnet\\ServiceAppDMS_GitHub\\ServiceAppDMSRecieving\\ServiceAppDMSRecieving\\ServiceAppDMSRecieving.csproj",
         "projectName": "ServiceAppDMSRecieving",
-        "projectPath": "C:\\Users\\rnava\\MyProject\\DMS\\DMS - Receiving Enhancement\\Console DMSreceivingdotnet\\ServiceAppDMS\\ServiceAppDMSRecieving\\ServiceAppDMSRecieving\\ServiceAppDMSRecieving.csproj",
+        "projectPath": "C:\\Users\\rnava\\MyProject\\DMS\\DMS - Receiving Enhancement\\Console DMSreceivingdotnet\\ServiceAppDMS_GitHub\\ServiceAppDMSRecieving\\ServiceAppDMSRecieving\\ServiceAppDMSRecieving.csproj",
         "packagesPath": "C:\\Users\\rnava\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rnava\\MyProject\\DMS\\DMS - Receiving Enhancement\\Console DMSreceivingdotnet\\ServiceAppDMS\\ServiceAppDMSRecieving\\ServiceAppDMSRecieving\\obj\\",
+        "outputPath": "C:\\Users\\rnava\\MyProject\\DMS\\DMS - Receiving Enhancement\\Console DMSreceivingdotnet\\ServiceAppDMS_GitHub\\ServiceAppDMSRecieving\\ServiceAppDMSRecieving\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\rnava\\AppData\\Roaming\\NuGet\\NuGet.Config",
