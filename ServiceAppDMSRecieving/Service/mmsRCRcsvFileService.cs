@@ -27,7 +27,6 @@ namespace ServiceAppDMSRecieving
         }
         public async void CopyCSVfileMMS_RCR()
         {
-            _logger.LogInformation("ConnectionStrings is  " + _configuration.GetSection("ConnectionStrings:DMS").Value);
             DateTime dateTime = DateTime.Now;
             string extendName = dateTime.ToString("MMddyyy_HHmmss");
             string sourceDirectory = _configuration.GetSection("FilePathforRCR:sourceDirectory").Value;  // UNC path to the CSV file 
